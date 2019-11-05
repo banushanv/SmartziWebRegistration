@@ -1,4 +1,4 @@
-package com.example.SmartziRegistration.model;
+package com.example.SmartziRegistration.constraint;
 
 import javax.validation.Payload;
 

@@ -3,6 +3,8 @@ package com.example.SmartziRegistration.model;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
+import com.example.SmartziRegistration.constraint.ValidReCaptcha;
+
 public class ForgotPasswordForm {
 
     @Email

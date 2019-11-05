@@ -72,14 +72,14 @@ public class ForgotPasswordController {
         tokenRepository.save(token);
 
         Mail mail = new Mail();
-        mail.setFrom("no-reply@memorynotfound.com");
+        mail.setFrom("SmartziWeb.com");
         mail.setTo(user.getEmail());
         mail.setSubject("Password reset request");
 
         Map<String, Object> model = new HashMap<>();
         model.put("token", token);
         model.put("user", user);
-        model.put("signature", "https://memorynotfound.com");
+        model.put("signature", "https://SmartziWeb.com");
         String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
         model.put("resetUrl", url + "/reset-password?token=" + token.getToken());
         mail.setModel(model);

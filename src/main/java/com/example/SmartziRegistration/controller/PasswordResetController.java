@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.example.SmartziRegistration.model.PasswordResetDto;
 import com.example.SmartziRegistration.model.PasswordResetToken;
 import com.example.SmartziRegistration.model.User;
 import com.example.SmartziRegistration.repository.PasswordResetTokenRepository;

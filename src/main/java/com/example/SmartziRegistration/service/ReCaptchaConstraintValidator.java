@@ -1,7 +1,7 @@
 package com.example.SmartziRegistration.service;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.SmartziRegistration.model.ValidReCaptcha;
+import com.example.SmartziRegistration.constraint.ValidReCaptcha;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

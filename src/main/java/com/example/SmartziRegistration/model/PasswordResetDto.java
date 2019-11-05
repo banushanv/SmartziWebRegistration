@@ -1,4 +1,4 @@
-package com.example.SmartziRegistration.controller;
+package com.example.SmartziRegistration.model;
 
 import javax.validation.constraints.NotEmpty;
 
