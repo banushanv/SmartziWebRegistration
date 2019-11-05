@@ -14,6 +14,8 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
+    private String phonenumber;
+    private String city;
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -28,22 +30,42 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String password) {
+    public User(String firstName, String lastName, String email,String phonenumber,String city, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phonenumber=phonenumber;
+        this.city=city;
         this.password = password;
     }
 
-    public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
+    public User(String firstName, String lastName, String email,String phonenumber,String city, String password, Collection<Role> roles) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phonenumber=phonenumber;
+        this.city=city;
         this.password = password;
         this.roles = roles;
     }
 
-    public Long getId() {
+    public String getPhonenumber() {
+		return phonenumber;
+	}
+
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public Long getId() {
         return id;
     }
 
@@ -91,15 +113,12 @@ public class User {
         this.roles = roles;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + "*********" + '\'' +
-                ", roles=" + roles +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", phonenumber=" + phonenumber + ", city=" + city + ", password=" + password + ", roles=" + roles
+				+ "]";
+	}
+
+ 
 }

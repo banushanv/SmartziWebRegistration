@@ -18,7 +18,7 @@
                 <div class="panel-body">
                     <div class="text-center">
                         <h3><i class="glyphicon glyphicon-user" style="font-size:2em;"></i></h3>
-                        <h2 class="text-center">Register</h2>
+                        <h2 class="text-center">Smartzi Registeration</h2>
                         <div class="panel-body">
 
                             <div th:if="${param.success}">
@@ -91,6 +91,51 @@
                                        th:each="error: ${#fields.errors('confirmEmail')}"
                                        th:text="${error}">Validation error</p>
                                 </div>
+                                
+                                    <div class="form-group"
+                                 th:classappend="${#fields.hasErrors('phonenumber')}? 'has-error':''">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user color-blue"></i>
+                                        </span>
+                                        <input id="phonenumber"
+                                               class="form-control"
+                                               placeholder="phonenumber"
+                                               th:field="*{phonenumber}"/>
+                                    </div>
+                                    <p class="error-message"
+                                       th:each="error: ${#fields.errors('phonenumber')}"
+                                       th:text="${error}">Validation error</p>
+                                </div> 
+                                
+                                
+                                
+                                
+                                
+                          
+                                
+                                
+                                    
+                                <div class="form-group"
+                                     th:classappend="${#fields.hasErrors('city')}? 'has-error':''">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user color-blue"></i>
+                                        </span>
+                                        <input id="city"
+                                               class="form-control"
+                                               placeholder="city"
+                                               th:field="*{city}"/>
+                                    </div>
+                                    <p class="error-message"
+                                       th:each="error: ${#fields.errors('city')}"
+                                       th:text="${error}">Validation error</p>
+                                </div>
+                                
+                                
+                                
+                                
+                                
                                 <div class="form-group"
                                      th:classappend="${#fields.hasErrors('password')}? 'has-error':''">
                                     <div class="input-group">

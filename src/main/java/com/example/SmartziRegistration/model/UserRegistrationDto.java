@@ -31,8 +31,33 @@ public class UserRegistrationDto {
     @Email
     @NotEmpty
     private String email;
+    
+    
+   
+    @NotEmpty
+    private String phonenumber;
+    
+    @NotEmpty
+    private String city;
+    
 
-    @Email
+    public String getPhonenumber() {
+		return phonenumber;
+	}
+
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	@Email
     @NotEmpty
     private String confirmEmail;
 
